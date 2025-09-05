@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Abdul Arif">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Abdul Arif</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMx5g5A5pYhyP/VIJKjPp5EWUqPi2tiV13xUmJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="css/dark.css" />
+    <link rel="stylesheet" type="text/css" href="css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <style>
+        @media (max-width: 768px) {
+            .tm_hero .hero_inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tm_hero .content {
+                width: 100%;
+                text-align: center;
+            }
+
+            .tm_hero .avatar {
+                position: static;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .tm_hero .avatar .main {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .tm_hero .content .name {
+                font-size: 50px;
+            }
+
+            .tm_hero .content .job {
+                font-size: 20px;
+            }
+
+            .image {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                /* padding-top: 56.25%; */
+                /* 16:9 Aspect Ratio */
+            }
+
+            .image img,
+            .image .main {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .tm_news .news_list ul li .image .main {
+                background-size: contain;
+            }
+        }
+        .tm_news .news_list ul li .details .category{
+            text-decoration: none;
+            color: #ea4343;
+            font-weight: 700;
+            font-family: josefin sans;
+        }
+
+        .tm_news .news_list ul li .details .title {
+         font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader_line"></div>
+    </div>
+
+    <div class="tm_all_wrap" data-magic-cursor="show" data-color="crimson">
+        <div class="tm_mobile_menu">
+            <div class="mobile_menu_inner">
+                <div class="mobile_in">
+                    <div class="logo">
+                    </div>
+                    <div class="trigger">
+                        <div class="hamburger hamburger--slider">
+                            <div class="hamburger-box">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown_inner">
+                    <ul class="anchor_nav">
+                        <li class="current"><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tm_header">
+            <div class="container">
+                <div class="inner">
+                    <div class="logo">
+                    </div>
+                    <div class="menu">
+                        <ul class="anchor_nav">
+                            <li class="current"><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Home Section -->
+        <div class="tm_section" id="home">
+            <div class="tm_hero">
+                <div class="container">
+                    <div class="hero_inner">
+                        <div class="content">
+                            <span class="hello">Hello, I'm</span>
+                            <h3 class="name">Abdul Arif</h3>
+                            <div class="job">
+                                <span class="cd-headline rotate-1">
+                                    <span class="blc">Senior Software Engineer - Backend</span>
+                                </span>
+                            </div>
+
+                            <div class="hero_buttons">
+                                <div class="tm_button">
+                                    <a class="anchor" target="_blank"
+                                        href="https://www.linkedin.com/in/abdularif"><span>Connect Linked<i
+                                                class="icon-linkedin-1"></i></span></a>
+                                </div>
+                                <div class="simple_button">
+                                    <a class="anchor" href="#about">About Me</a>
+                                </div>
+                            </div>
+                            <div class="tm_down">
+                                <div class="down-icon white top_120">
+                                    <a class="anchor" href="#about">
+                                        <svg width="26px" height="100%" viewBox="0 0 247 390" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                                            <path id="wheel" d="M123.359,79.775l0,72.843"
+                                                style="fill:none;stroke:#fff;stroke-width:20px;" />
+                                            <path id="mouse"
+                                                d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
+                                                style="fill:none;stroke:#fff;stroke-width:20px;" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="avatar parallax" data-relative-input="true">
+                            <div class="main">
+                                <img src="img/hero/arif.png" alt class="layer" data-depth="0.1" />
+                            </div>
+                            <span class="one"><span class="in layer" data-depth="0.14"></span></span>
+                            <span class="two"><span class="in layer" data-depth="0.18"></span></span>
+                            <span class="three"><span class="in layer" data-depth="0.22"></span></span>
+                            <span class="four"><span class="in layer" data-depth="0.26"></span></span>
+                            <span class="five"><span class="in layer" data-depth="0.3"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero_mail">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tm_section" id="about">
+            <div class="tm_about">
+                <div class="about_inner">
+                    <div class="left">
+                        <div class="image">
+                            <img src="img/thumbs/45-49.jpg" alt />
+                            <div class="main" data-img-url="img/about/1.jpg"></div>
+                            <span class="square moving_effect" data-direction="y" data-reverse="yes"></span>
+                            <span class="border"><span class="in moving_effect" data-direction="x"
+                                    data-reverse="yes"></span></span>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="title">
+                            <span class="small">About Me</span>
+                            <h3>I'm <span>Abdul Arif</span></h3>
+                            <h3>Senior Software <span>Engineer - Backend</span></h3>
+                            <span class="subtitle">Based in Jakarta, Indonesia</span>
+                        </div>
+                        <div class="text">
+                            <p>
+                                As an innovative and results-driven Lead Software Engineer, I bring over <b>4.5 years</b> of experience in website and mobile app development. I have successfully delivered numerous projects for clients across various sectors, leading the creation of advanced software solutions. With a portfolio of over <b>20 projects</b>, including both mobile and web applications, I am passionate about continuous learning and committed to mastering new technologies to drive innovation and meet client needs.
+                            </p>
+                        </div>
+                        <div class="tm_button wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="image">
+                            <img src="img/thumbs/41-61.jpg" alt />
+                            <div class="square moving_effect" data-direction="x" data-reverse="no"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tm_section" id="experiences">
+            <div class="tm_resume">
+                <div class="content">
+                    <div class="container">
+                        <div class="resume_in">
+                            <div class="tm_main_title" data-text-align="left" data-color="dark">
+                                <span> Explore my educational background and professional
+                                    experience.</span>
+                            </div>
+                            <div class="content_inner">
+                                <ul>
+                                    <li>
+                                        <h3 class="main_title"><span>Education</span></h3>
+                                        <ul class="list">
+                                            <li>
+                                                <div class="list_inner">
+                                                    <span class="icon"><img class="svg" src="img/svg/degree.svg"
+                                                            alt /></span>
+                                                    <div class="info">
+                                                        <div class="left">
+                                                            <h3>Bachelor of Computer Science</h3>
+                                                            <span>Universitas Gadjah Mada (UGM)</span>
+                                                        </div>
+                                                        <div class="right">
+                                                            <span>2015 - 2019</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="main_title"><span>Experience</span></h3>
+                                        <ul class="list">
+                                            <li>
+                                                <div class="list_inner">
+                                                    <span class="icon"><img class="svg" src="img/svg/case.svg"
+                                                            alt /></span>
+                                                    <div class="info">
+                                                        <div class="left">
+                                                            <h3>Lead Software Engineer</h3>
+                                                            <span>Suitmedia Digital Agency</span>
+                                                        </div>
+                                                        <div class="right">
+                                                            <span>Jan 2023 - Present</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>
+                                                            Leading a team of software engineers to achieve
+                                                            project objectives, providing technical
+                                                            consultancy to clients, and optimizing backend
+                                                            systems for web and mobile applications.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list_inner">
+                                                    <span class="icon"><img class="svg" src="img/svg/case.svg"
+                                                            alt /></span>
+                                                    <div class="info">
+                                                        <div class="left">
+                                                            <h3>Senior Software Engineer</h3>
+                                                            <span>Suitmedia Digital Agency</span>
+                                                        </div>
+                                                        <div class="right">
+                                                            <span>Mar 2022 - Jan 2023</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>
+                                                            Delivered high-quality web and mobile
+                                                            applications, overseeing the work of junior
+                                                            software engineers and ensuring project delivery
+                                                            on time and within scope.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="list_inner">
+                                                    <span class="icon"><img class="svg" src="img/svg/case.svg"
+                                                            alt /></span>
+                                                    <div class="info">
+                                                        <div class="left">
+                                                            <h3>Junior Software Engineer</h3>
+                                                            <span>Suitmedia Digital Agency</span>
+                                                        </div>
+                                                        <div class="right">
+                                                            <span>Feb 2020 - Mar 2022</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>
+                                                            Contributed to the development of web and mobile
+                                                            applications, supporting senior engineers and
+                                                            gaining experience in project management and
+                                                            execution.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="media" data-background-style="video">
+                    </div>
+                    <span class="square moving_effect" data-direction="y" data-reverse="yes"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tm_section" id="skills">
+            <div class="tm_service">
+                <div class="container">
+                    <div class="service_list">
+                        <ul>
+                            <li class="simple wow fadeInLeft" data-wow-duration="1s">
+                                <div class="list_inner">
+                                    <div class="tm_main_title" data-text-align="left" data-color="dark">
+                                        <h3>My Skills</h3>
+                                        <p>I am proficient in a wide range of technical skills and tools, ensuring high-quality software solutions tailored to meet client needs efficiently.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <!-- <img class="svg" src="img/svg/programming.svg" alt /> -->
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>Programming Languages</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>PHP, Go, C#, C++, JavaScript</p>
+                                    </div>
+
+                                    <!--  img/service/programming.jpg" alt /> -->
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <!-- <img class="svg" src="img/svg/web.svg" alt /> -->
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>Web Development Frameworks</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Laravel, CodeIgniter, Vue.js, Nuxt.js</p>
+                                    </div>
+
+                                    <!--  img/service/web_development.jpg" alt /> -->
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <!-- <img class="svg" src="img/svg/database.svg" alt /> -->
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>Database Management</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>MySQL, PostgreSQL</p>
+                                    </div>
+
+                                    <!--  img/service/database.jpg" alt /> -->
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <!-- <img class="svg" src="img/svg/cloud.svg" alt /> -->
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>Cloud Platforms</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Google Cloud Platform (GCP), Microsoft Azure, Amazon Web Services (AWS)</p>
+                                    </div>
+
+                                    <!--  img/service/cloud.jpg" alt /> -->
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>Containerization</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Docker, Kubernetes</p>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <!-- <img class="svg" src="img/svg/ci_cd.svg" alt /> -->
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>CI/CD</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>GitLab & Github CI/CD</p>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>Operating Systems</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Linux Server, macOS, Windows</p>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <!-- <img class="svg" src="img/svg/version_control.svg" alt /> -->
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>Version Control</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Git, GitLab</p>
+                                    </div>
+
+                                    <!--  img/service/version_control.jpg" alt /> -->
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>Software Quality</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Clean Coding, Troubleshooting</p>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon">
+                                        <!-- <img class="svg" src="img/svg/other_skills.svg" alt /> -->
+                                        <img class="back" src="img/svg/service.png" alt />
+                                    </span>
+                                    <div class="title">
+                                        <h3>Other Skills</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Team Management, Team Leadership, Analytical Skills, Design Patterns,
+                                            Functional Programming, System Performance, Microservices Architecture,
+                                            RESTful API, SOAP API, Security Practices, Performance Optimization,
+                                            Cross-Platform Development, Technical Documentation, Code Review and Code
+                                            Quality</p>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tm_section" id="projects">
+                    <div class="tm_news">
+                        <div class="container">
+                            <div class="tm_main_title" data-text-align="center" data-color="dark">
+                                <h3>Project Portfolio</h3>
+                                <p>I have worked on over 20 real-world projects for various clients, including both mobile and web applications. Each project is currently live, actively serving its intended users.
+                                </p>
+                            </div>
+                            <div class="news_list">
+                                <ul>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <!-- <div class="main" data-img-url="img/projects/itb.jpg"></div> -->
+                                                <div class="main" data-img-url="img/projects/itb-mobile.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Mobile App (Private)</span>
+                                                <h3 class="title">MySix ITB App</h3>
+                                                <!-- <span class="date">Educational Institution App</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInRight" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <!-- <div class="main" data-img-url="img/projects/eiger.jpg"></div> -->
+                                                <div class="main" data-img-url="img/projects/eiger.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Private)</span>
+                                                <h3 class="title">Eiger Omnichannel
+                                                </h3>
+                                                <!-- <span class="date">Omnichannel Retail Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <!-- <div class="main" data-img-url="img/projects/uph.jpg"></div> -->
+                                                <div class="main" data-img-url="img/projects/uph.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Mobile App (Private)</span>
+                                                <h3 class="title">UPH </h3>
+                                                <!-- <span class="date">University Student App</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInRight" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <!-- <div class="main" data-img-url="img/projects/dompet_dhuafa.jpg"></div> -->
+                                                <div class="main" data-img-url="img/projects/dompet-dhuafa.png">
+                                                </div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website  (Public)</span>
+                                                <h3 class="title">Dompet Dhuafa</h3>
+                                                <!-- <span class="date">Charity Organization Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <!-- <div class="main" data-img-url="img/projects/jasamarga.jpg"></div> -->
+                                                <div class="main" data-img-url="img/projects/jasamarga.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Private)</span>
+                                                <h3 class="title">Jasamarga Digitalisasi Arsip</h3>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/alifmart.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Public)</span>
+                                                <h3 class="title">Alifmart e-commerce
+                                                </h3>
+                                                <!-- <span class="date">E-Commerce Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInRight" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <!-- <div class="main" data-img-url="img/projects/emtek.png"></div> -->
+                                                <div class="main" data-img-url="img/projects/emtek.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Public)</span>
+                                                <h3 class="title">Emtek </h3>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/klar.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Public)</span>
+                                                <h3 class="title">Klarsmile </h3>
+                                                <!-- <span class="date">E-Commerce Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInRight" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/imde.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Public)</span>
+                                                <h3 class="title">IMDE </h3>
+                                                <!-- <span class="date">Information Management Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/iaei.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Public)</span>
+                                                <h3 class="title">IAEI </h3>
+                                                <!-- <span class="date">Professional Association Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInRight" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/csi.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Mobile App (Public)</span>
+                                                <h3 class="title">CSI e-commerce </h3>
+                                                <!-- <span class="date">Customer Service Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/aplipesta.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Private)</span>
+                                                <h3 class="title">APL Ipesta </h3>
+                                                <!-- <span class="date">Educational Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInRight" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <!-- <div class="main" data-img-url="img/projects/apl_oneclick.png"></div> -->
+                                                <div class="main" data-img-url="img/projects/aploneclick.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Private)</span>
+                                                <h3 class="title">APL Oneclick </h3>
+                                                <!-- <span class="date">E-Commerce Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/iqademy-ph.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Private)</span>
+                                                <h3 class="title">Sampoerna - Iqademy
+                                                        (Philippines)</h3>
+                                                <!-- <span class="date">Educational Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInRight" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/iqademy.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Private)</span>
+                                                <h3 class="title">Sampoerna - Iqademy
+                                                        (Indonesia)</h3>
+                                                <!-- <span class="date">Educational Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/omela.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Public)</span>
+                                                <h3 class="title">Frisian Flag Omela
+                                                </h3>
+                                                <!-- <span class="date">Dairy Product Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="wow fadeInLeft" data-wow-duration="1s">
+                                        <div class="list_inner">
+                                            <div class="image">
+                                                <img src="img/thumbs/42-29.jpg" alt />
+                                                <div class="main" data-img-url="img/projects/his-travel.png"></div>
+
+                                            </div>
+                                            <div class="details">
+                                                <span class="category">Website (Public)</span>
+                                                <h3 class="title">His Travel </h3>
+                                                <!-- <span class="date">Travel Agency Platform</span> -->
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="tm_section">
+                    <div class="tm_copyright">
+                        <div class="container">
+                            <div class="copyright_inner">
+                                <div class="top">
+                                    <div class="logo">
+                                    </div>
+                                    <div class="social">
+                                        <span>Connect</span>
+                                        <ul>
+                                            <li><a href="https://www.linkedin.com/in/abdularif" target="_blank"><i class="icon-linkedin-1"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+
+                                </div>
+                                <span class="border moving_effect" data-direction="y" data-reverse="yes"></span>
+                            </div>
+                        </div>
+                        <span class="square moving_effect" data-direction="x">
+                            <a class="totop" href="#">
+                                <img class="svg one" src="img/svg/arrow-top.svg" alt />
+                                <img class="svg two" src="img/svg/arrow-top.svg" alt />
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="mouse-cursor cursor-outer"></div>
+                <div class="mouse-cursor cursor-inner"></div>
+
+            </div>
+            <script src="js/jquery.js"></script>
+            <script src="js/plugins.js"></script>
+            <script src="js/init.js"></script>
+</body>
+</html>
