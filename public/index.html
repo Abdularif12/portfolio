@@ -298,10 +298,14 @@
         /* Section spacing */
         #skills {
             padding-top: 120px;
+            position: relative;
+            overflow: hidden;
         }
 
         #projects {
             padding-top: 0;
+            position: relative;
+            overflow: hidden;
         }
 
         /* Remove residual nested margin if old structure cached */
@@ -324,6 +328,674 @@
 
         body.modern #projects .projects-grid .desc {
             color: var(--text-dim);
+        }
+
+        .vertical-timeline-container {
+            padding: 0 0 60px 0;
+            background: none;
+        }
+
+        .vertical-timeline {
+            position: relative;
+            margin: 48px 0 0 0;
+            padding-left: 32px;
+            border-left: 3px solid #eaeaea;
+        }
+
+        .vertical-timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--accent, #ea4343);
+            opacity: 0.12;
+        }
+
+        .vtimeline-item {
+            position: relative;
+            margin-bottom: 48px;
+            display: flex;
+            align-items: flex-start;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUpTimeline 0.8s cubic-bezier(.4, 0, .2, 1) forwards;
+        }
+
+        .vtimeline-item:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .vtimeline-item:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .vtimeline-item:nth-child(3) {
+            animation-delay: 0.25s;
+        }
+
+        .vtimeline-item:nth-child(4) {
+            animation-delay: 0.35s;
+        }
+
+        @keyframes fadeInUpTimeline {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .vtimeline-icon {
+            position: absolute;
+            left: -44px;
+            top: 0;
+            width: 44px;
+            height: 44px;
+            background: #fff;
+            border: 3px solid var(--accent, #ea4343);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 12px rgba(234, 67, 67, 0.08);
+            z-index: 2;
+        }
+
+        .vtimeline-icon img.svg {
+            width: 24px;
+            height: 24px;
+            display: block;
+        }
+
+        .vtimeline-content {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.07);
+            padding: 28px 32px 22px 32px;
+            margin-left: 24px;
+            min-width: 0;
+            flex: 1;
+            position: relative;
+            transition: box-shadow .3s;
+        }
+
+        .vtimeline-content:hover {
+            box-shadow: 0 8px 32px -8px rgba(234, 67, 67, 0.13);
+        }
+
+        .vtimeline-date {
+            font-size: 15px;
+            color: #ea4343;
+            font-weight: 700;
+            letter-spacing: .2px;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .vtimeline-place {
+            font-size: 15px;
+            color: #888;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .vtimeline-content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 6px 0;
+            color: #15111e;
+        }
+
+        .vtimeline-content ul.experience-points {
+            margin: 12px 0 0 0;
+            padding: 0 0 0 18px;
+            list-style: disc;
+            color: #5a5563;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .vertical-timeline {
+                padding-left: 18px;
+            }
+
+            .vtimeline-content {
+                padding: 22px 16px 16px 16px;
+                margin-left: 16px;
+            }
+
+            .vtimeline-icon {
+                left: -28px;
+                width: 32px;
+                height: 32px;
+            }
+
+            .vtimeline-icon img.svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .vertical-timeline {
+                padding-left: 8px;
+            }
+
+            .vtimeline-content {
+                padding: 16px 8px 12px 8px;
+                margin-left: 8px;
+                font-size: 15px;
+            }
+
+            .vtimeline-content h3 {
+                font-size: 17px;
+            }
+
+            .vtimeline-date,
+            .vtimeline-place {
+                font-size: 13px;
+            }
+
+            .vtimeline-icon {
+                left: -18px;
+                width: 24px;
+                height: 24px;
+            }
+
+            .vtimeline-icon img.svg {
+                width: 13px;
+                height: 13px;
+            }
+        }
+
+        body.modern .vertical-timeline {
+            border-left: 3px solid var(--accent, #06d6a0);
+        }
+
+        body.modern .vertical-timeline:before {
+            background: var(--accent, #06d6a0);
+        }
+
+        body.modern .vtimeline-icon {
+            background: var(--bg, #0f1115);
+            border-color: var(--accent, #06d6a0);
+        }
+
+        body.modern .vtimeline-content {
+            background: var(--bg-alt, #161a21);
+            color: var(--text, #e5e7eb);
+            box-shadow: var(--shadow-soft, 0 4px 16px -2px rgba(0, 0, 0, .35));
+        }
+
+        body.modern .vtimeline-content h3 {
+            color: #fff;
+        }
+
+        body.modern .vtimeline-date {
+            color: var(--accent, #06d6a0);
+        }
+
+        body.modern .vtimeline-place {
+            color: var(--text-dim, #9ca3af);
+        }
+
+        body.modern .vtimeline-content ul.experience-points {
+            color: var(--text-dim, #9ca3af);
+        }
+
+        .skills-ornaments {
+            position: absolute;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .skills-square {
+            position: absolute;
+            background: #06d6a0;
+            opacity: 0.13;
+            border-radius: 8px;
+            animation: skills-square-float 7s ease-in-out infinite alternate;
+        }
+
+        .square-1 {
+            width: 70px;
+            height: 70px;
+            left: 2%;
+            top: 12%;
+            animation-delay: 0s;
+        }
+
+        .square-2 {
+            width: 40px;
+            height: 40px;
+            right: 6%;
+            top: 38%;
+            animation-delay: 2s;
+        }
+
+        .skills-dot {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: #ea4343;
+            border-radius: 50%;
+            opacity: 0.18;
+            animation: skills-dot-bounce 5s ease-in-out infinite alternate;
+        }
+
+        .dot-1 {
+            left: 8%;
+            bottom: 18%;
+            animation-delay: 1.2s;
+        }
+
+        .dot-2 {
+            right: 10%;
+            top: 18%;
+            animation-delay: 2.7s;
+        }
+
+        .skills-ring {
+            position: absolute;
+            border: 3px solid #06d6a0;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            left: 50%;
+            bottom: 8%;
+            transform: translateX(-50%);
+            opacity: 0.11;
+            animation: skills-ring-spin 9s linear infinite;
+        }
+
+        @keyframes skills-square-float {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                transform: translateY(-30px) scale(1.08);
+            }
+        }
+
+        @keyframes skills-dot-bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(24px);
+            }
+        }
+
+        @keyframes skills-ring-spin {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(360deg);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .skills-square.square-1 {
+                width: 40px;
+                height: 40px;
+                left: 2%;
+                top: 8%;
+            }
+
+            .skills-square.square-2 {
+                width: 24px;
+                height: 24px;
+                right: 4%;
+                top: 32%;
+            }
+
+            .skills-dot {
+                width: 10px;
+                height: 10px;
+            }
+
+            .skills-ring {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .skills-square.square-1 {
+                left: 2%;
+                top: 4%;
+            }
+
+            .skills-square.square-2 {
+                right: 2%;
+                top: 24%;
+            }
+
+            .skills-dot.dot-1 {
+                left: 4%;
+                bottom: 10%;
+            }
+
+            .skills-dot.dot-2 {
+                right: 4%;
+                top: 10%;
+            }
+
+            .skills-ring {
+                bottom: 2%;
+            }
+        }
+
+        .experiences-ornaments {
+            position: absolute;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .exp-square {
+            position: absolute;
+            background: #06d6a0;
+            opacity: 0.13;
+            border-radius: 8px;
+            animation: exp-square-float 7s ease-in-out infinite alternate;
+        }
+
+        .exp-square.square-1 {
+            width: 70px;
+            height: 70px;
+            left: 5%;
+            top: 10%;
+            animation-delay: 0s;
+        }
+
+        .exp-square.square-2 {
+            width: 40px;
+            height: 40px;
+            right: 8%;
+            top: 30%;
+            animation-delay: 2s;
+        }
+
+        .exp-dot {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: #ea4343;
+            border-radius: 50%;
+            opacity: 0.18;
+            animation: exp-dot-bounce 5s ease-in-out infinite alternate;
+        }
+
+        .exp-dot.dot-1 {
+            left: 10%;
+            bottom: 20%;
+            animation-delay: 1.2s;
+        }
+
+        .exp-dot.dot-2 {
+            right: 12%;
+            top: 15%;
+            animation-delay: 2.7s;
+        }
+
+        .exp-ring {
+            position: absolute;
+            border: 3px solid #06d6a0;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            left: 50%;
+            bottom: 5%;
+            transform: translateX(-50%);
+            opacity: 0.11;
+            animation: exp-ring-spin 9s linear infinite;
+        }
+
+        @keyframes exp-square-float {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                transform: translateY(-30px) scale(1.08);
+            }
+        }
+
+        @keyframes exp-dot-bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(24px);
+            }
+        }
+
+        @keyframes exp-ring-spin {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(360deg);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .exp-square.square-1 {
+                width: 40px;
+                height: 40px;
+                left: 5%;
+                top: 8%;
+            }
+
+            .exp-square.square-2 {
+                width: 24px;
+                height: 24px;
+                right: 6%;
+                top: 25%;
+            }
+
+            .exp-dot {
+                width: 10px;
+                height: 10px;
+            }
+
+            .exp-ring {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .exp-square.square-1 {
+                left: 5%;
+                top: 5%;
+            }
+
+            .exp-square.square-2 {
+                right: 4%;
+                top: 20%;
+            }
+
+            .exp-dot.dot-1 {
+                left: 6%;
+                bottom: 12%;
+            }
+
+            .exp-dot.dot-2 {
+                right: 6%;
+                top: 12%;
+            }
+
+            .exp-ring {
+                bottom: 2%;
+            }
+        }
+
+        .projects-ornaments {
+            position: absolute;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .proj-square {
+            position: absolute;
+            background: #06d6a0;
+            opacity: 0.10;
+            border-radius: 8px;
+            animation: proj-square-float 7.5s ease-in-out infinite alternate;
+        }
+
+        .square-1 {
+            width: 54px;
+            height: 54px;
+            left: 4%;
+            top: 13%;
+            animation-delay: 0.7s;
+        }
+
+        .square-2 {
+            width: 32px;
+            height: 32px;
+            right: 8%;
+            top: 33%;
+            animation-delay: 2.2s;
+        }
+
+        .proj-dot {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: #ea4343;
+            border-radius: 50%;
+            opacity: 0.13;
+            animation: proj-dot-bounce 5.5s ease-in-out infinite alternate;
+        }
+
+        .dot-1 {
+            left: 12%;
+            bottom: 14%;
+            animation-delay: 1.1s;
+        }
+
+        .dot-2 {
+            right: 14%;
+            top: 20%;
+            animation-delay: 2.9s;
+        }
+
+        .proj-ring {
+            position: absolute;
+            border: 2.5px solid #06d6a0;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            left: 60%;
+            bottom: 10%;
+            transform: translateX(-50%);
+            opacity: 0.09;
+            animation: proj-ring-spin 8.5s linear infinite;
+        }
+
+        @keyframes proj-square-float {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                transform: translateY(-20px) scale(1.06);
+            }
+        }
+
+        @keyframes proj-dot-bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(16px);
+            }
+        }
+
+        @keyframes proj-ring-spin {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translateX(-50%) rotate(360deg);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .proj-square.square-1 {
+                width: 30px;
+                height: 30px;
+                left: 4%;
+                top: 8%;
+            }
+
+            .proj-square.square-2 {
+                width: 16px;
+                height: 16px;
+                right: 4%;
+                top: 22%;
+            }
+
+            .proj-dot {
+                width: 8px;
+                height: 8px;
+            }
+
+            .proj-ring {
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .proj-square.square-1 {
+                left: 2%;
+                top: 3%;
+            }
+
+            .proj-square.square-2 {
+                right: 2%;
+                top: 10%;
+            }
+
+            .proj-dot.dot-1 {
+                left: 4%;
+                bottom: 5%;
+            }
+
+            .proj-dot.dot-2 {
+                right: 4%;
+                top: 5%;
+            }
+
+            .proj-ring {
+                bottom: 1%;
+            }
         }
     </style>
 </head>
@@ -486,524 +1158,501 @@
         </div>
 
         <div class="tm_section" id="experiences">
-            <div class="tm_resume">
-                <div class="content">
-                    <div class="container">
-                        <div class="resume_in">
-                            <div class="tm_main_title" data-text-align="left" data-color="dark">
-                                <span> Explore my educational background and professional
-                                    experience.</span>
+            <div class="experiences-ornaments">
+                <span class="exp-square square-1"></span>
+                <span class="exp-square square-2"></span>
+                <span class="exp-dot dot-1"></span>
+                <span class="exp-dot dot-2"></span>
+                <span class="exp-ring ring-1"></span>
+            </div>
+            <div class="vertical-timeline-container">
+                <div class="container">
+                    <div class="tm_main_title" data-text-align="left" data-color="dark">
+                        <span>Explore my educational background and professional experience.</span>
+                    </div>
+                    <div class="vertical-timeline">
+                        <!-- Lead Software Engineer -->
+                        <div class="vtimeline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <div class="vtimeline-icon work">
+                                <img class="svg" src="img/svg/case.svg" alt="Work" />
                             </div>
-                            <div class="content_inner">
-                                <ul>
-                                    <li>
-                                        <h3 class="main_title"><span>Education</span></h3>
-                                        <ul class="list">
-                                            <li>
-                                                <div class="list_inner">
-                                                    <span class="icon"><img class="svg" src="img/svg/degree.svg"
-                                                            alt /></span>
-                                                    <div class="info">
-                                                        <div class="left">
-                                                            <h3>Bachelor of Computer Science</h3>
-                                                            <span>Universitas Gadjah Mada (UGM)</span>
-                                                        </div>
-                                                        <div class="right">
-                                                            <span>2015 - 2019</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                            <div class="vtimeline-content">
+                                <span class="vtimeline-date">Jan 2023 - Present</span>
+                                <h3>Lead Software Engineer</h3>
+                                <span class="vtimeline-place">Suitmedia Digital Agency</span>
+                                <ul class="experience-points">
+                                    <li>Led a team of engineers (senior, junior, interns) to deliver projects on time
+                                        and within scope.</li>
+                                    <li>Acted as technical consultant, advising on stacks, architecture, and best
+                                        practices.</li>
+                                    <li>Conducted the recruitment process for campus interns, including screening tests
+                                        and interviews.</li>
+                                    <li>Implemented standardized internal development processes and base code for
+                                        efficiency and consistency.</li>
+                                    <li>Built and optimized backend systems with focus on scalability and performance.
                                     </li>
-                                    <li>
-                                        <h3 class="main_title"><span>Experience</span></h3>
-                                        <ul class="list">
-                                            <li>
-                                                <div class="list_inner">
-                                                    <span class="icon"><img class="svg" src="img/svg/case.svg"
-                                                            alt /></span>
-                                                    <div class="info">
-                                                        <div class="left">
-                                                            <h3>Lead Software Engineer</h3>
-                                                            <span>Suitmedia Digital Agency</span>
-                                                        </div>
-                                                        <div class="right">
-                                                            <span>Jan 2023 - Present</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <ul class="experience-points">
-                                                            <li>Led a team of engineers (senior, junior, interns) to
-                                                                deliver projects on time and within scope.</li>
-                                                            <li>Acted as technical consultant, advising on stacks,
-                                                                architecture, and best practices.</li>
-                                                            <li>Conducted the recruitment process for campus interns,
-                                                                which involved screening tests and interviews.</li>
-                                                            <li>Implemented standardized internal development processes
-                                                                and base code to ensure efficiency and consistency.</li>
-                                                            <li>Built and optimized backend systems with focus on
-                                                                scalability and performance.</li>
-                                                            <li>Deployed and maintained applications across multiple
-                                                                cloud environments.</li>
-                                                            <li>Maintained existing client projects to meet service
-                                                                level agreements (SLAs) and improve technical
-                                                                performance.</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="list_inner">
-                                                    <span class="icon"><img class="svg" src="img/svg/case.svg"
-                                                            alt /></span>
-                                                    <div class="info">
-                                                        <div class="left">
-                                                            <h3>Senior Software Engineer</h3>
-                                                            <span>Suitmedia Digital Agency</span>
-                                                        </div>
-                                                        <div class="right">
-                                                            <span>Mar 2022 - Jan 2023</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <ul class="experience-points">
-                                                            <li>Delivered high-quality web and mobile applications while
-                                                                overseeing the work of junior software engineers.</li>
-                                                            <li>Developed and optimized backend systems for web and
-                                                                mobile applications to ensure high performance and
-                                                                scalability.</li>
-                                                            <li>Successfully delivered applications on time and within
-                                                                scope, meeting client expectations.</li>
-                                                            <li>Developed and optimized backend systems for web and
-                                                                mobile applications to ensure high performance and
-                                                                scalability.</li>
-                                                            <li>Maintained existing client projects to meet service
-                                                                level agreements (SLAs) and improve technical
-                                                                performance.</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="list_inner">
-                                                    <span class="icon"><img class="svg" src="img/svg/case.svg"
-                                                            alt /></span>
-                                                    <div class="info">
-                                                        <div class="left">
-                                                            <h3>Junior Software Engineer</h3>
-                                                            <span>Suitmedia Digital Agency</span>
-                                                        </div>
-                                                        <div class="right">
-                                                            <span>Feb 2020 - Mar 2022</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text">
-                                                        <ul class="experience-points">
-                                                            <li>Contributed to the development of web and mobile
-                                                                applications, collaborating with senior software
-                                                                engineers to deliver high-quality solutions.</li>
-                                                            <li>Assisted in backend system development and optimization,
-                                                                learning and implementing best practices under the
-                                                                guidance of senior team members.</li>
-                                                            <li>Played a key role in delivering applications on time and
-                                                                within scope, gaining valuable experience in project
-                                                                management and execution.</li>
-                                                            <li>Supported the maintenance of existing client projects,
-                                                                troubleshooting and resolving issues to uphold service
-                                                                level agreements (SLAs).</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    <li>Deployed and maintained applications across multiple cloud environments.</li>
+                                    <li>Maintained existing client projects to meet SLAs and improve technical
+                                        performance.</li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="media" data-background-style="video">
-                </div>
-                <span class="square moving_effect" data-direction="y" data-reverse="yes"></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="tm_section" id="skills">
-        <div class="tm_service">
-            <div class="container">
-                <div class="service_list">
-                    <ul class="modern-grid">
-                        <li class="simple wow fadeInLeft" data-wow-duration="1s">
-                            <div class="list_inner">
-                                <div class="tm_main_title" data-text-align="left" data-color="dark">
-                                    <h3>My Skills</h3>
-                                    <p>Overview of my core technical expertise, development practices, and leadership
-                                        capabilities that enable delivery of scalable, maintainable, and high-quality
-                                        software solutions.</p>
-                                </div>
+                        <!-- Senior Software Engineer -->
+                        <div class="vtimeline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <div class="vtimeline-icon work">
+                                <img class="svg" src="img/svg/case.svg" alt="Work" />
                             </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.05s">
-                            <div class="list_inner tilt-effect">
-                                <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
-                                <div class="title">
-                                    <h3>Programming Languages</h3>
-                                </div>
-                                <div class="text">
-                                    <p>C#, PHP, C++, JavaScript</p>
-                                </div>
+                            <div class="vtimeline-content">
+                                <span class="vtimeline-date">Mar 2022 - Jan 2023</span>
+                                <h3>Senior Software Engineer</h3>
+                                <span class="vtimeline-place">Suitmedia Digital Agency</span>
+                                <ul class="experience-points">
+                                    <li>Delivered high-quality web and mobile applications while overseeing junior
+                                        engineers.</li>
+                                    <li>Developed and optimized backend systems for high performance and scalability.
+                                    </li>
+                                    <li>Delivered applications on time and within scope, meeting client expectations.
+                                    </li>
+                                    <li>Maintained existing client projects to meet SLAs and improve technical
+                                        performance.</li>
+                                </ul>
                             </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <div class="list_inner tilt-effect">
-                                <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
-                                <div class="title">
-                                    <h3>Frameworks</h3>
-                                </div>
-                                <div class="text">
-                                    <p>ASP.NET Core, Entity Framework Core, Laravel, Vue.js, Nuxt.js</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.15s">
-                            <div class="list_inner tilt-effect">
-                                <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
-                                <div class="title">
-                                    <h3>Databases</h3>
-                                </div>
-                                <div class="text">
-                                    <p>SQL Server, MySQL, PostgreSQL, MongoDB</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <div class="list_inner tilt-effect">
-                                <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
-                                <div class="title">
-                                    <h3>Front-End</h3>
-                                </div>
-                                <div class="text">
-                                    <p>Vue.js, Bootstrap, jQuery, CSS</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.25s">
-                            <div class="list_inner tilt-effect">
-                                <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
-                                <div class="title">
-                                    <h3>Cloud Platforms</h3>
-                                </div>
-                                <div class="text">
-                                    <p>Microsoft Azure, AWS, GCP, DigitalOcean, IDCloudHost</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                            <div class="list_inner tilt-effect">
-                                <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
-                                <div class="title">
-                                    <h3>DevOps & Deployment</h3>
-                                </div>
-                                <div class="text">
-                                    <p>Azure DevOps, GitLab CI/CD, Docker, automated pipelines, backend/frontend
-                                        deployment management</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.35s">
-                            <div class="list_inner tilt-effect">
-                                <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
-                                <div class="title">
-                                    <h3>Practices</h3>
-                                </div>
-                                <div class="text">
-                                    <p>Clean Coding, TDD, Design Patterns, Clean Architecture, Microservices, RESTful
-                                        API, Security Practices, Performance Optimization</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-                            <div class="list_inner tilt-effect">
-                                <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
-                                <div class="title">
-                                    <h3>Other</h3>
-                                </div>
-                                <div class="text">
-                                    <p>Team Leadership, Mentoring, Consulting, System Architecture Design,
-                                        Documentation, Code Review, Troubleshooting</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Projects moved OUTSIDE of #skills for proper spacing -->
-    <div class="tm_section" id="projects">
-        <div class="tm_news">
-            <div class="container">
-                <div class="tm_main_title" data-text-align="center" data-color="dark">
-                    <h3>Project Portfolio</h3>
-                    <p>Successfully contributed to and delivered 20+ web and mobile application projects. Each project
-                        is currently live, actively serving its intended users.</p>
-                </div>
-                <div class="news_list">
-                    <ul class="projects-grid">
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/eiger.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website & Retail (Private)</span>
-                                    <h3 class="title">Eiger Omnichannel Website & Retail Systems</h3>
-                                    <p class="desc">Integrated nationwide retail POS + marketplace (Shopee, etc.)
-                                        synchronization for inventory, sales, and reporting with near real-time central
-                                        ↔ store data flow.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/jasamarga.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Private)</span>
-                                    <h3 class="title">Jasamarga Digitalisasi Arsip</h3>
-                                    <p class="desc">Enterprise digital archival platform improving accessibility,
-                                        compliance and lifecycle management for large-scale document assets.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.15s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/itb-mobile.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Mobile & Web </span>
-                                    <h3 class="title">ITB Projects (MySix, Akademik, FinAid)</h3>
-                                    <p class="desc">Backend & service integration for student engagement, attendance,
-                                        academic requests & financial aid systems.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/uph.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Mobile App (Private)</span>at 
-                                    <h3 at class="title">UPH Mobile App</h3>
-                                    <p class="desc">Campus mobile platform enabling student attendance, academic
-                                        workflows and service interactions.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.25s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/dompet-dhuafa.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Public)</span>
-                                    <h3 class="title">Dompet Dhuafa</h3>
-                                    <p class="desc">Donation & philanthropy platform with secure payment integration and
-                                        donor reporting dashboards.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/alifmart.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Public)</span>
-                                    <h3 class="title">Alifmart e-commerce</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.35s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/emtek.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Public)</span>
-                                    <h3 class="title">Emtek</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/klar.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Public)</span>
-                                    <h3 class="title">Klarsmile</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.45s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/imde.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Public)</span>
-                                    <h3 class="title">EmtekEdu</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/iaei.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Public)</span>
-                                    <h3 class="title">IAEI</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.55s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/csi.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Mobile App (Public)</span>
-                                    <h3 class="title">CSI e-commerce</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/aplipesta.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Private)</span>
-                                    <h3 class="title">APL Ipesta</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.65s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/aploneclick.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Private)</span>
-                                    <h3 class="title">APL Oneclick</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/iqademy-ph.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Private)</span>
-                                    <h3 class="title">Sampoerna - Iqademy (Philippines)</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.75s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/iqademy.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Private)</span>
-                                    <h3 class="title">Sampoerna - Iqademy (Indonesia)</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.8s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/omela.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Public)</span>
-                                    <h3 class="title">Frisian Flag Omela</h3>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.85s">
-                            <div class="list_inner">
-                                <div class="image">
-                                    <img src="img/thumbs/42-29.jpg" alt />
-                                    <div class="main" data-img-url="img/projects/his-travel.png"></div>
-                                </div>
-                                <div class="details">
-                                    <span class="category">Website (Public)</span>
-                                    <h3 class="title">His Travel</h3>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tm_section">
-        <div class="tm_copyright">
-            <div class="container">
-                <div class="copyright_inner">
-                    <div class="top">
-                        <div class="logo">
                         </div>
-                        <div class="social">
-                            <span>Connect</span>
-                            <ul>
-                                <li><a href="https://www.linkedin.com/in/abdularif" target="_blank"><i
-                                            class="icon-linkedin-1"></i></a></li>
-                            </ul>
+                        <!-- Junior Software Engineer -->
+                        <div class="vtimeline-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                            <div class="vtimeline-icon work">
+                                <img class="svg" src="img/svg/case.svg" alt="Work" />
+                            </div>
+                            <div class="vtimeline-content">
+                                <span class="vtimeline-date">Feb 2020 - Mar 2022</span>
+                                <h3>Junior Software Engineer</h3>
+                                <span class="vtimeline-place">Suitmedia Digital Agency</span>
+                                <ul class="experience-points">
+                                    <li>Contributed to the development of web and mobile applications, collaborating
+                                        with senior engineers.</li>
+                                    <li>Assisted in backend system development and optimization, learning and
+                                        implementing best practices.</li>
+                                    <li>Played a key role in delivering applications on time and within scope, gaining
+                                        valuable experience in project management and execution.</li>
+                                    <li>Supported the maintenance of existing client projects, troubleshooting and
+                                        resolving issues to uphold SLAs.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Education -->
+                        <div class="vtimeline-item wow fadeInUp" data-wow-duration="1s">
+                            <div class="vtimeline-icon education">
+                                <img class="svg" src="img/svg/degree.svg" alt="Education" />
+                            </div>
+                            <div class="vtimeline-content">
+                                <span class="vtimeline-date">2015 - 2019</span>
+                                <h3>Bachelor of Computer Science</h3>
+                                <span class="vtimeline-place">Universitas Gadjah Mada (UGM)</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="bottom">
-
-                    </div>
-                    <span class="border moving_effect" data-direction="y" data-reverse="yes"></span>
                 </div>
             </div>
-            <span class="square moving_effect" data-direction="x">
-                <a class="totop" href="#">
-                    <img class="svg one" src="img/svg/arrow-top.svg" alt />
-                    <img class="svg two" src="img/svg/arrow-top.svg" alt />
-                </a>
-            </span>
         </div>
-    </div>
-    <div class="mouse-cursor cursor-outer"></div>
-    <div class="mouse-cursor cursor-inner"></div>
+
+        <div class="tm_section" id="skills" style="
+    margin-top: 0px;
+    padding-top: 0;
+">
+            <div class="skills-ornaments">
+                <span class="skills-square square-1"></span>
+                <span class="skills-square square-2"></span>
+                <span class="skills-dot dot-1"></span>
+                <span class="skills-dot dot-2"></span>
+                <span class="skills-ring ring-1"></span>
+            </div>
+            <div class="tm_service">
+                <div class="container">
+                    <div class="service_list">
+                        <ul class="modern-grid">
+                            <li class="simple wow fadeInLeft" data-wow-duration="1s">
+                                <div class="list_inner">
+                                    <div class="tm_main_title" data-text-align="left" data-color="dark">
+                                        <h3>My Skills</h3>
+                                        <p>Overview of my core technical expertise, development practices, and
+                                            leadership
+                                            capabilities that enable delivery of scalable, maintainable, and
+                                            high-quality
+                                            software solutions.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.05s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
+                                    <div class="title">
+                                        <h3>Programming Languages</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>C#, PHP, C++, JavaScript</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
+                                    <div class="title">
+                                        <h3>Frameworks</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>ASP.NET Core, Entity Framework Core, Laravel, Vue.js, Nuxt.js</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.15s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
+                                    <div class="title">
+                                        <h3>Databases</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>SQL Server, MySQL, PostgreSQL, MongoDB</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
+                                    <div class="title">
+                                        <h3>Front-End</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Vue.js, Bootstrap, jQuery, CSS</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.25s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
+                                    <div class="title">
+                                        <h3>Cloud Platforms</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Microsoft Azure, AWS, GCP, DigitalOcean, IDCloudHost</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
+                                    <div class="title">
+                                        <h3>DevOps & Deployment</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Azure DevOps, GitLab CI/CD, Docker, automated pipelines, backend/frontend
+                                            deployment management</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.35s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
+                                    <div class="title">
+                                        <h3>Practices</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Clean Coding, TDD, Design Patterns, Clean Architecture, Microservices,
+                                            RESTful
+                                            API, Security Practices, Performance Optimization</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+                                <div class="list_inner tilt-effect">
+                                    <span class="icon"><img class="back" src="img/svg/service.png" alt /></span>
+                                    <div class="title">
+                                        <h3>Other</h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Team Leadership, Mentoring, Consulting, System Architecture Design,
+                                            Documentation, Code Review, Troubleshooting</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects moved OUTSIDE of #skills for proper spacing -->
+        <div class="tm_section" id="projects">
+            <div class="projects-ornaments">
+                <span class="proj-square square-1"></span>
+                <span class="proj-square square-2"></span>
+                <span class="proj-dot dot-1"></span>
+                <span class="proj-dot dot-2"></span>
+                <span class="proj-ring ring-1"></span>
+            </div>
+            <div class="tm_news">
+                <div class="container">
+                    <div class="tm_main_title" data-text-align="center" data-color="dark">
+                        <h3>Project Portfolio</h3>
+                        <p>Over the past years, I’ve contributed to more than 20 applications—spanning enterprise
+                            systems, e-commerce platforms, government solutions, academic tools, nonprofit initiatives,
+                            and retail products..</p>
+                    </div>
+                    <div class="news_list">
+                        <ul class="projects-grid">
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/eiger.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website & Retail (Private)</span>
+                                        <h3 class="title">Eiger Omnichannel Website & Retail Systems</h3>
+                                        <p class="desc">Integrated nationwide retail POS + marketplace (Shopee, etc.)
+                                            synchronization for inventory, sales, and reporting with near real-time
+                                            central
+                                            ↔ store data flow.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/jasamarga.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Private)</span>
+                                        <h3 class="title">Jasamarga Digitalisasi Arsip</h3>
+                                        <p class="desc">Enterprise digital archival platform improving accessibility,
+                                            compliance and lifecycle management for large-scale document assets.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.15s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/itb-mobile.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Mobile & Web </span>
+                                        <h3 class="title">ITB Projects (MySix, Akademik, FinAid)</h3>
+                                        <p class="desc">Backend & service integration for student engagement,
+                                            attendance,
+                                            academic requests & financial aid systems.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/uph.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Mobile App (Private)</span>
+                                        <h3 at class="title">UPH Mobile App</h3>
+                                        <p class="desc">Campus mobile platform enabling student attendance, academic
+                                            workflows and service interactions.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.25s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/dompet-dhuafa.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Public)</span>
+                                        <h3 class="title">Dompet Dhuafa</h3>
+                                        <p class="desc">Donation & philanthropy platform with secure payment
+                                            integration and
+                                            donor reporting dashboards.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/alifmart.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Public)</span>
+                                        <h3 class="title">Alifmart e-commerce</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.35s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/emtek.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Public)</span>
+                                        <h3 class="title">Emtek</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/klar.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Public)</span>
+                                        <h3 class="title">Klarsmile</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.45s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/imde.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Public)</span>
+                                        <h3 class="title">EmtekEdu</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/iaei.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Public)</span>
+                                        <h3 class="title">IAEI</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.55s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/csi.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Mobile App (Public)</span>
+                                        <h3 class="title">CSI e-commerce</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/aplipesta.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Private)</span>
+                                        <h3 class="title">APL Ipesta</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.65s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/aploneclick.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Private)</span>
+                                        <h3 class="title">APL Oneclick</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/iqademy-ph.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Private)</span>
+                                        <h3 class="title">Sampoerna - Iqademy (Philippines)</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.75s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/iqademy.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Private)</span>
+                                        <h3 class="title">Sampoerna - Iqademy (Indonesia)</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.8s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/omela.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Public)</span>
+                                        <h3 class="title">Frisian Flag Omela</h3>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.85s">
+                                <div class="list_inner">
+                                    <div class="image">
+                                        <img src="img/thumbs/42-29.jpg" alt />
+                                        <div class="main" data-img-url="img/projects/his-travel.png"></div>
+                                    </div>
+                                    <div class="details">
+                                        <span class="category">Website (Public)</span>
+                                        <h3 class="title">His Travel</h3>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tm_section">
+            <div class="tm_copyright">
+                <div class="container">
+                    <div class="copyright_inner">
+                        <div class="top">
+                            <div class="logo">
+                            </div>
+                            <div class="social">
+                                <span>Connect</span>
+                                <ul>
+                                    <li><a href="https://www.linkedin.com/in/abdularif" target="_blank"><i
+                                                class="icon-linkedin-1"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom">
+
+                        </div>
+                        <span class="border moving_effect" data-direction="y" data-reverse="yes"></span>
+                    </div>
+                </div>
+                <span class="square moving_effect" data-direction="x">
+                    <a class="totop" href="#">
+                        <img class="svg one" src="img/svg/arrow-top.svg" alt />
+                        <img class="svg two" src="img/svg/arrow-top.svg" alt />
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
 
     </div>
     <script src="js/jquery.js"></script>
